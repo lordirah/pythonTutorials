@@ -79,6 +79,53 @@ x = 1,2,3
 x = 1,
 x = tuple(y)
 
-#immutable
+#immutable but member objects may be mutable
 x = (1,2,3)
-del(x[1])
+#del(x[1]) cannot delete
+x = ([1,2,3],7)
+del(x[0][1])
+print(x)
+
+#Set
+#-Stores non duplicate items
+#-Very fast than list
+#-Math operations
+#-Unordered
+x = {1,2,3,4}
+x = set()
+#x = set(list)
+
+#Set comprehension
+x = {x*x for x in range(10) if x > 3}
+print(x)
+#op will not be in order of the for loop execution
+#AND set1 & set2
+#OR set1 | set2
+#diff set1 - set2
+#subset set1 <= set2
+#superset set1 >= set2
+
+#Dictionary
+#-Key/value pair
+#-Associative array like java hashmap
+#-Unordered
+#-ENtries in dict are always in random order
+x = {'pork':25.3, 'beef': 5, 'chicken': 8}
+x = dict(pork = 10,beef = 3,chicken = 7)
+
+#Add or alter item in dict
+x['pork'] = 20
+del x['beef']
+print(x)
+
+#Accessing key value pairs
+print(x.keys())
+print(x.values())
+print(x.items())
+
+#Iterating dictionary
+for keys in x:
+    print(keys, x[keys])
+
+for a,b in x.items():
+    print(a,b)
