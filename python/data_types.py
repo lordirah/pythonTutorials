@@ -1,3 +1,4 @@
+import time
 #List
 #-General purpose
 #-Grow and shrink as required
@@ -129,3 +130,8 @@ for keys in x:
 
 for a,b in x.items():
     print(a,b)
+
+#Put a time inside dictionary
+test_dict = {"a": time.time()}
+print(test_dict)
+print(time.time())
