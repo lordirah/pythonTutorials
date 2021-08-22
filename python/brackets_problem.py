@@ -29,7 +29,7 @@ def bracket(a):
     else:
         return "Invalid Brackets given"
 
-a = '{()}[({})]'
+a = '{()}[({})][]()'
 #a = '{}()'
 #a = '{'
 #a = '{(})'

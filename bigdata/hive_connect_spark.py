@@ -18,6 +18,6 @@ sparkSession = (SparkSession
                 .getOrCreate()
                 )
 
-df_load = sparkSession.sql('select count(*) from employees.titles')
-df_load.show()
-print(df_load.show())
+emp_df = sparkSession.sql('select count(*) from employees.employees')
+emp_df.show()
+print(emp_df.show())
